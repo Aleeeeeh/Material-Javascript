@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForEach</title>
+    <style>
+        .conteiner{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .block{
+            margin: 5px auto;
+            width: 500px;
+            height: 200px;
+            background-color: green;
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--Com uso do forEach percorremos os block acessando com a const divs e aplicando efeito nos params-->
+    <button onclick='divs.forEach(hide)'>Esconder</button>
+    <button onclick='divs.forEach(show)'>Mostrar</button>
+
+    <div class="container">
+        <div class="block">bloco</div>
+        <div class="block">bloco</div>
+        <div class="block">bloco</div>
+        <div class="block">bloco</div>
+    </div>   
+    <!--Elemento do display atrubuindo as variáveis hide e show seu display none ou block-->
+    <script>
+        const divs = Array.from(document.querySelectorAll('.block'))
+        const hide = el => el.style.display = 'none'
+        const show = el => el.style.display = 'block'
+    </script>
+
+</body>
+</html>

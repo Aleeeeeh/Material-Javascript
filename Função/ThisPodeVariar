@@ -1,0 +1,17 @@
+const function1 = () => console.log(this === window) Função arrow
+
+A diferença entre a função arrow e a função normal, é que a arrow é mais enxuta, um código mais curto e limpo
+e o this não varia.
+A função normal, o this pode variar de acordo como chamamos a função, exemplo:
+
+function f1(){console.log(this === window)} Irá apontar Verdadeiro
+
+Porem...Se tentarmos chamar a função por clique por exemplo ja não será verdadeiro, ou seja,
+não irá apontar para o window("Window é um objeto global, cheio de propriedades e funções")
+
+document.getElementsByTagName('body')[0].onclick = f1
+f1() {console.log(this === window)}
+
+Neste caso será falso, o this ja estará apontando para o body. e não mais para o window.
+
+
